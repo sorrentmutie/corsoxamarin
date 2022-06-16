@@ -10,7 +10,7 @@ namespace DemoCorsoMattina
         {
             InitializeComponent();
 
-            MainPage = new DemoBinding();
+            MainPage = new DemoTrigger();
         }
 
         protected override void OnStart()

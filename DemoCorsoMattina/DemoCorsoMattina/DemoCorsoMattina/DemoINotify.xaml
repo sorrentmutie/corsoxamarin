@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DemoCorsoMattina.ViewModels"
+             x:Class="DemoCorsoMattina.DemoINotify">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout.BindingContext>
+                <viewModels:ClockViewModel/>
+            </StackLayout.BindingContext>
+            <Label Text="{Binding DateTime.Year, StringFormat='Anno: {0}'}"></Label>
+            <Label Text="{Binding DateTime.Month, StringFormat='Mese: {0}'}"></Label>
+            <Label Text="{Binding DateTime.Day, StringFormat='Giorno: {0}'}"></Label>
+            <Label Text="{Binding DateTime.TimeOfDay, StringFormat='Ora: {0:T}'}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

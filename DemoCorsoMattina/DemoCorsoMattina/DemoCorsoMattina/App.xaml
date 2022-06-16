@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:DemoCorsoMattina.Converters"
              x:Class="DemoCorsoMattina.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -113,7 +114,18 @@
                 <Setter Property="Padding" Value="{StaticResource Padding}"></Setter>
             </Style>
 
-
+            <Style TargetType="Entry" x:Key="Focused">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="IsFocused"
+                             Value="True">
+                        <Setter Property="BackgroundColor" 
+                                Value="Yellow"></Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            
+            <converters:IntToBoolConverter x:Key="intToBool"></converters:IntToBoolConverter>
 
         </ResourceDictionary>
     </Application.Resources>

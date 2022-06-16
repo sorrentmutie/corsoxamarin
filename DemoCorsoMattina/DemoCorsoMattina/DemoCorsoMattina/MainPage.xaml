@@ -71,7 +71,21 @@
     <StackLayout Style="{StaticResource ExternalPadding}">
         <Label Text="29°C" Style="{StaticResource TitleLabelStyle}"></Label>
         <Label Text="Contenuto" Style="{StaticResource ContentLabelStyle}"></Label>
-        <Label Text="{Binding Name}" TextColor="White" HorizontalTextAlignment="Center"></Label>
+       
+        <Label Text="{Binding Name}" TextColor="White" 
+               HorizontalTextAlignment="Center">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                             Binding="{Binding IsActive}"
+                             Value="True">
+                    <Setter Property="TextColor" Value="Yellow"></Setter>
+                    <Setter Property="FontSize" Value="Large"></Setter>
+                </DataTrigger>
+            </Label.Triggers>
+            
+        </Label>
+        
+        
         <Label Text="{Binding Surname}"  TextColor="White" HorizontalTextAlignment="Center"></Label>
         <Image Source="{Binding ImageUrl}"></Image>
         <ListView x:Name="listOfPeople">

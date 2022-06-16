@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoCorsoMattina.DemoConverter">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry x:Name="nameEntry" Text=""
+                   Placeholder="Inserisci nome"
+                   VerticalOptions="CenterAndExpand"></Entry>
+
+            <Button Text="Search"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    IsEnabled="{Binding Source={x:Reference nameEntry},
+                       Path=Text.Length, 
+                       Converter={StaticResource intToBool}}">
+            </Button>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

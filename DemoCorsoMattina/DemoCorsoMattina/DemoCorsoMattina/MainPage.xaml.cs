@@ -20,7 +20,8 @@ namespace DemoCorsoMattina
 
         private void LoadData()
         {
-            var person = new Person { Id = 1, Name = "Mario", Surname = "Rossi", 
+            var person = new Person { Id = 1, Name = "Mario", Surname = "Rossi",
+                IsActive = true,
                 ImageUrl= "https://www.servizi-web-marketing.it/images/stories/news/immaginedascaricare.jpg"
             };
 
@@ -38,5 +39,9 @@ namespace DemoCorsoMattina
             listOfPeople.ItemsSource = people;
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
