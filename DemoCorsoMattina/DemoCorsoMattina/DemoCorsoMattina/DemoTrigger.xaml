@@ -5,7 +5,7 @@
              x:Class="DemoCorsoMattina.DemoTrigger">
     <ContentPage.Content>
         <StackLayout>
-
+            <Label Text="Prova"></Label>
             <Entry Style="{StaticResource Focused}" Placeholder="Inserisci il nome"/>
             <Entry Placeholder="Inserisci il cognome"></Entry>
             <controls:MyCustomEntry></controls:MyCustomEntry>
